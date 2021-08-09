@@ -6,3 +6,4 @@ CTF Website: https://ctf.bsidesnoida.in/
 
 Members:
 - Shubham Palriwala
+- Kavipriya A
