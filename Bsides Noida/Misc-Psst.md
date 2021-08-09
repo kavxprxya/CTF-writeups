@@ -20,7 +20,13 @@ Extracted the data from the file and decoded it to string.
 
 
 ## Detailed solution
+We downloaded the file and we found out that there were nested directories containing txt files .
+Each of the txt files had a single character of the flag in the order of the directories.
+We attempted to open each directory and figure out the flag but we faced issues.
+After which, we tried to solve it by code.
+
 This is the code to extract the data from the file given and decode it. 
+
 ```py 
 import os
 for root, subdirs, files in os.walk('.'):#assuming executes from chall/
@@ -33,6 +39,14 @@ for root, subdirs, files in os.walk('.'):#assuming executes from chall/
                 except Exception:
                     pass
 ```
+This is what the output was:
+```
+BSNoida{d1d_y0u_u53_b45h_5cr1pt1ng_6f7220737461636b6f766572666c6f773f}
+```
+
+On decoding the hex string, we got the flag.
+
+
 
 
 ## Flag
