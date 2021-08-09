@@ -1,6 +1,12 @@
 # Crypto: Xoro
+![date](https://img.shields.io/badge/date-07.08.2021-brightgreen.svg)
+![category](https://img.shields.io/badge/category-crypto-lightgrey.svg)
+![score](https://img.shields.io/badge/score-388/500-blue.svg)
+<!-- Score of the question / Max Score possible in any question -->
 
-Xoro was a Crypto challenge where a netcat was given  along with the code for that was running. The following python code was what was runnning in the netcat. 
+## Description
+
+Xoro was a Crypto challenge where a netcat command was given to be connected. The following python code was running on it, when attempted to connect.
 ```py
 #!/usr/bin/env python3
 
@@ -30,7 +36,9 @@ if  __name__ == "__main__":
 		print(":( Oops!", e)
 		print("Terminating Session!")
 ```
-
+## Summary
+The user input+flag was XORed with a randomly generated key and the hex was provided. When the output was XORed with the input, we got the key, and through that, the flag.
+## Detailed solution
 First, without having a proper understanding of what the code does, we tried to make a decrypt function from the encrypt function. But it was a random key generated, so we thought we had to try all the key combinations and guessed one would make it.
 Trying bruteforce, we gave a loop for a flag length from 9 to 80 and kept on trying with generating a random function, but it was pretty clear we're not gonna make it. We didn't know the length of the flag, but it was clear that when no input was given, a 78 character hex was returned. Therefore the length of the flag was 39. So we made the following decode function, to figure out if any output was there that made sense.
 ```py
@@ -57,5 +65,7 @@ And if we got the key, then we can create the padded key, and XOR it with our en
 A small gist of what i went through: 
 ![Screenshot](https://media.discordapp.net/attachments/856580866175139890/873627481360441384/Screenshot_2021-08-07_at_11.33.28_PM.png)
 
-The flag was:
-`BSNoida{how_can_you_break_THE_XOR_?!?!}`
+## Flag
+```
+BSNoida{how_can_you_break_THE_XOR_?!?!}
+```
