@@ -5,5 +5,6 @@ Finished 55 out of 411 teams
 CTF Website: https://ctf.bsidesnoida.in/
 
 Members:
-- Shubham Palriwala
-- Vibhuti Arora
+- [Shubham Palriwala](https://github.com/ShubhamPalriwala)
+- [Alok Naushad](https://github.com/mintbomb27)
+- [Vibhuti Arora]((https://github.com/vibhutiarora355)
